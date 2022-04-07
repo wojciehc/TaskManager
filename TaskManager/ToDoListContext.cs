@@ -1,6 +1,8 @@
 using System;
 using System.Data.Entity;
 using System.Linq;
+using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 namespace TaskManager
 {
@@ -25,16 +27,29 @@ namespace TaskManager
     {
         protected override void Seed(ToDoListContext context)
         {   
-            new Task()
-            {
-                Id = 101,
-                Name = "Testowe Zadanie",
-                StartDate = DateTime.Now,
-                Deadline = new DateTime(2022, 04, 08, 11, 15, 0),
-                Comment = "my name jef",
-                IsCompleted = false,
+            var tasks = new List<Task>
+            {   
+                new Task()
+                {
+                    Id = 101,
+                    Name = "Testowe Zadanie",
+                    StartDate = DateTime.Now,
+                    Deadline = new DateTime(2022, 04, 08, 11, 15, 0),
+                    Comment = "opis",
+                    IsCompleted = false,
+                },
+                new Task()
+                {
+                    Id = 102,
+                    Name = "Testowe Zadanie 2",
+                    StartDate = DateTime.Now,
+                    Deadline = new DateTime(2022, 04, 09, 12, 45, 0),
+                    Comment = "opis 2",
+                    IsCompleted = false,
+                }
 
             };
+            tasks.ForEach(s => context.Tasks.Add(s));
             context.SaveChanges();
         }
     }
