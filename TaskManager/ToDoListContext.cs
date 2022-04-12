@@ -26,25 +26,34 @@ namespace TaskManager
     public class ToDoListDbInitializer : DropCreateDatabaseAlways<ToDoListContext>
     {
         protected override void Seed(ToDoListContext context)
-        {   
+        {
             var tasks = new List<Task>
-            {   
+            {
                 new Task()
                 {
-                    Id = 101,
+                    //ID = 101,
                     Name = "Testowe Zadanie",
                     StartDate = DateTime.Now,
-                    Deadline = new DateTime(2022, 04, 08, 11, 15, 0),
+                    Deadline = new DateTime(2022, 04, 09, 11, 15, 0),
                     Comment = "opis",
                     IsCompleted = false,
                 },
                 new Task()
                 {
-                    Id = 102,
+                    //ID = 102,
                     Name = "Testowe Zadanie 2",
                     StartDate = DateTime.Now,
-                    Deadline = new DateTime(2022, 04, 09, 12, 45, 0),
+                    Deadline = new DateTime(2022, 04, 10, 12, 45, 0),
                     Comment = "opis 2",
+                    IsCompleted = false,
+                },
+                new Task()
+                {
+                    //ID = 103,
+                    Name = "Testowe Zadanie 3",
+                    StartDate = DateTime.Now,
+                    Deadline = new DateTime(2022, 04, 20, 13, 45, 0),
+                    Comment = "opis 3",
                     IsCompleted = false,
                 }
 
