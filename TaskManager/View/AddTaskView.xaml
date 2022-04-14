@@ -14,11 +14,13 @@
                  Height="30"
                  Width="400"
                  HorizontalAlignment="Left"
-                 Style="{DynamicResource TextBoxTheme}"/>
+                 Style="{DynamicResource TextBoxTheme}"
+                 GotFocus="TextBox_GotFocus"/>
         <TextBox Text="Comment"
                  Height="100"
                  Width="400"
-                 Style="{DynamicResource TextBoxTheme}"/>
+                 Style="{DynamicResource TextBoxTheme}"
+                 GotFocus="TextBox_GotFocus"/>
         <Border Margin="0,20"
                 Background="White"
                 CornerRadius="15">
