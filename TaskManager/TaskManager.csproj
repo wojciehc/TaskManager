@@ -71,6 +71,10 @@
     <Compile Include="Migrations\202204081801480_InitialCreate.designer.cs">
       <DependentUpon>202204081801480_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204141652163_InitialCreate1.cs" />
+    <Compile Include="Migrations\202204141652163_InitialCreate1.designer.cs">
+      <DependentUpon>202204141652163_InitialCreate1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ObservableObject.cs" />
     <Compile Include="RelayCommand.cs" />
@@ -101,6 +105,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Theme\ScrollbarTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AddTaskView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -126,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\202204081801480_InitialCreate.resx">
       <DependentUpon>202204081801480_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204141652163_InitialCreate1.resx">
+      <DependentUpon>202204141652163_InitialCreate1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
