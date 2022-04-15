@@ -16,187 +16,275 @@
 
         <!-- nie wiem jak zrobic jakis szablon, ale mysle ze w taki sposob mozna wyswietlac taski,
         to do: przycisk w drugim gridzie, do konca taska-->
-        <StackPanel Orientation="Horizontal">
-            <Border Width="630"
-                    Height="100"
-                    Background="LightGreen"
-                    CornerRadius="25">
-            
-            <Grid Width="600">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="13*"/>
-                        <ColumnDefinition Width="3*"/>
-                    </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <Border 
+                    Style="{DynamicResource TaskBorder}">
 
-                    <StackPanel>
-                    <TextBlock Text="taskName"
+                    <Grid Width="600">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="13*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+                            <TextBlock Text="taskName"
                                FontSize="25"
                                FontWeight="Bold"/>
-                    <TextBlock Text="taskContent"
+                            <TextBlock Text="taskContent"
                                FontSize="18"/>
-                </StackPanel>
-                    <StackPanel HorizontalAlignment="Right"
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right"
                                 Grid.Column="2">
-                    <TextBlock Text="Deadline"
+                            <TextBlock Text="Deadline"
                                FontSize="14"
                                FontWeight="Bold"/>
-                    <TextBlock Text="StartDate"
+                            <TextBlock Text="StartDate"
                                FontSize="14"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Border Width="630"
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="630"
                     Height="100"
-                    Background="LightGreen"
-                    CornerRadius="25">
+                    CornerRadius="25"
+                    Style="{DynamicResource TaskBorder}">
 
-                <Grid Width="600">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="13*"/>
-                        <ColumnDefinition Width="3*"/>
-                    </Grid.ColumnDefinitions>
+                    <Grid Width="600">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="13*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <StackPanel>
-                        <TextBlock Text="taskName"
+                        <StackPanel>
+                            <TextBlock Text="taskName"
                                FontSize="25"
                                FontWeight="Bold"/>
-                        <TextBlock Text="taskContent"
+                            <TextBlock Text="taskContent"
                                FontSize="18"/>
-                    </StackPanel>
-                    <StackPanel HorizontalAlignment="Right"
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right"
                                 Grid.Column="2">
-                        <TextBlock Text="Deadline"
+                            <TextBlock Text="Deadline"
                                FontSize="14"
                                FontWeight="Bold"/>
-                        <TextBlock Text="StartDate"
+                            <TextBlock Text="StartDate"
                                FontSize="14"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Border Width="630"
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="630"
                     Height="100"
-                    Background="LightGreen"
-                    CornerRadius="25">
+                    CornerRadius="25"
+                    Style="{DynamicResource TaskBorder}">
 
-                <Grid Width="600">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="13*"/>
-                        <ColumnDefinition Width="3*"/>
-                    </Grid.ColumnDefinitions>
+                    <Grid Width="600">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="13*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <StackPanel>
-                        <TextBlock Text="taskName"
+                        <StackPanel>
+                            <TextBlock Text="taskName"
                                FontSize="25"
                                FontWeight="Bold"/>
-                        <TextBlock Text="taskContent"
+                            <TextBlock Text="taskContent"
                                FontSize="18"/>
-                    </StackPanel>
-                    <StackPanel HorizontalAlignment="Right"
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right"
                                 Grid.Column="2">
-                        <TextBlock Text="Deadline"
+                            <TextBlock Text="Deadline"
                                FontSize="14"
                                FontWeight="Bold"/>
-                        <TextBlock Text="StartDate"
+                            <TextBlock Text="StartDate"
                                FontSize="14"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Border Width="630"
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="630"
                     Height="100"
-                    Background="LightGreen"
-                    CornerRadius="25">
+                    CornerRadius="25"
+                    Style="{DynamicResource TaskBorder}">
 
-                <Grid Width="600">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="13*"/>
-                        <ColumnDefinition Width="3*"/>
-                    </Grid.ColumnDefinitions>
+                    <Grid Width="600">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="13*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <StackPanel>
-                        <TextBlock Text="taskName"
+                        <StackPanel>
+                            <TextBlock Text="taskName"
                                FontSize="25"
                                FontWeight="Bold"/>
-                        <TextBlock Text="taskContent"
+                            <TextBlock Text="taskContent"
                                FontSize="18"/>
-                    </StackPanel>
-                    <StackPanel HorizontalAlignment="Right"
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right"
                                 Grid.Column="2">
-                        <TextBlock Text="Deadline"
+                            <TextBlock Text="Deadline"
                                FontSize="14"
                                FontWeight="Bold"/>
-                        <TextBlock Text="StartDate"
+                            <TextBlock Text="StartDate"
                                FontSize="14"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Border Width="630"
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="630"
                     Height="100"
-                    Background="LightGreen"
-                    CornerRadius="25">
+                    CornerRadius="25"
+                    Style="{DynamicResource TaskBorder}">
 
-                <Grid Width="600">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="13*"/>
-                        <ColumnDefinition Width="3*"/>
-                    </Grid.ColumnDefinitions>
+                    <Grid Width="600">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="13*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <StackPanel>
-                        <TextBlock Text="taskName"
+                        <StackPanel>
+                            <TextBlock Text="taskName"
                                FontSize="25"
                                FontWeight="Bold"/>
-                        <TextBlock Text="taskContent"
+                            <TextBlock Text="taskContent"
                                FontSize="18"/>
-                    </StackPanel>
-                    <StackPanel HorizontalAlignment="Right"
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right"
                                 Grid.Column="2">
-                        <TextBlock Text="Deadline"
+                            <TextBlock Text="Deadline"
                                FontSize="14"
                                FontWeight="Bold"/>
-                        <TextBlock Text="StartDate"
+                            <TextBlock Text="StartDate"
                                FontSize="14"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Border Width="630"
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="630"
                     Height="100"
-                    Background="LightGreen"
-                    CornerRadius="25">
+                    CornerRadius="25"
+                    Style="{DynamicResource TaskBorder}">
 
-                <Grid Width="600">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="13*"/>
-                        <ColumnDefinition Width="3*"/>
-                    </Grid.ColumnDefinitions>
+                    <Grid Width="600">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="13*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <StackPanel>
-                        <TextBlock Text="taskName LAST!!!!!!!!!!!"
+                        <StackPanel>
+                            <TextBlock Text="taskName"
                                FontSize="25"
                                FontWeight="Bold"/>
-                        <TextBlock Text="taskContent"
+                            <TextBlock Text="taskContent"
                                FontSize="18"/>
-                    </StackPanel>
-                    <StackPanel HorizontalAlignment="Right"
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right"
                                 Grid.Column="2">
-                        <TextBlock Text="Deadline"
+                            <TextBlock Text="Deadline"
                                FontSize="14"
                                FontWeight="Bold"/>
-                        <TextBlock Text="StartDate"
+                            <TextBlock Text="StartDate"
                                FontSize="14"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="630"
+                    Height="100"
+                    CornerRadius="25"
+                    Style="{DynamicResource TaskBorder}">
+
+                    <Grid Width="600">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="13*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+                            <TextBlock Text="taskName"
+                               FontSize="25"
+                               FontWeight="Bold"/>
+                            <TextBlock Text="taskContent"
+                               FontSize="18"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right"
+                                Grid.Column="2">
+                            <TextBlock Text="Deadline"
+                               FontSize="14"
+                               FontWeight="Bold"/>
+                            <TextBlock Text="StartDate"
+                               FontSize="14"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="630"
+                    Height="100"
+                    CornerRadius="25"
+                    Style="{DynamicResource TaskBorder}">
+
+                    <Grid Width="600">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="13*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+                            <TextBlock Text="taskName"
+                               FontSize="25"
+                               FontWeight="Bold"/>
+                            <TextBlock Text="taskContent"
+                               FontSize="18"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right"
+                                Grid.Column="2">
+                            <TextBlock Text="Deadline"
+                               FontSize="14"
+                               FontWeight="Bold"/>
+                            <TextBlock Text="StartDate"
+                               FontSize="14"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="630"
+                    Height="100"
+                    CornerRadius="25"
+                    Style="{DynamicResource TaskBorder}">
+
+                    <Grid Width="600">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="13*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+                            <TextBlock Text="taskName LAST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+                               FontSize="25"
+                               FontWeight="Bold"/>
+                            <TextBlock Text="taskContent"
+                               FontSize="18"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right"
+                                Grid.Column="2">
+                            <TextBlock Text="Deadline"
+                               FontSize="14"
+                               FontWeight="Bold"/>
+                            <TextBlock Text="StartDate"
+                               FontSize="14"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+
         </StackPanel>
-            
-    </StackPanel>
     </ScrollViewer>
 </UserControl>
