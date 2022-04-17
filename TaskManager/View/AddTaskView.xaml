@@ -10,13 +10,15 @@
              Background="Transparent">
     <StackPanel Margin="40,40,0,0"
                 HorizontalAlignment="Left">
-        <TextBox Text="Task name"
+        <TextBox Name="TaskNameTextBox" 
+                Text="Task name"
                  Height="30"
                  Width="400"
                  HorizontalAlignment="Left"
                  Style="{DynamicResource TextBoxTheme}"
                  GotFocus="TextBox_GotFocus"/>
         <TextBox Text="Comment"
+                 Name="CommentTextBox" 
                  Height="100"
                  Width="400"
                  Style="{DynamicResource TextBoxTheme}"
@@ -24,9 +26,18 @@
         <Border Margin="0,20"
                 Background="White"
                 CornerRadius="15">
-            <DatePicker Name="Deadline"
+            <DatePicker Name="DeadlineDatePicker"
                         DisplayDateStart="{x:Static sys:DateTime.Today}"
                         FontSize="20"/>
         </Border>
+
+        <Button Content="Add new task"
+                Name="AddNewTaskButton"
+                Height="30"
+                Width="100"
+                Margin="250,10,0,0"
+                Click="AddNewTaskButton_Click"
+                />
+
     </StackPanel>
 </UserControl>

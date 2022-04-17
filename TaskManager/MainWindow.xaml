@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:TaskManager"
         xmlns:vievModel="clr-namespace:TaskManager.ViewModel"
         mc:Ignorable="d"
-        Title="Task Manager" Height="450" Width="850" Background="#FF5C175F"
-        MinHeight="450" MinWidth="800" ResizeMode="CanResizeWithGrip">
+        Title="Task Manager" Height="500" Width="900" Background="#FF5C175F"
+        MinHeight="500" MinWidth="900" ResizeMode="CanResizeWithGrip">
 
     <Window.DataContext>
         <vievModel:MainViewModel/>

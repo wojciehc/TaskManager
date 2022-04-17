@@ -17,13 +17,14 @@ namespace TaskManager
         public ToDoListContext()
             : base("name=ToDoListContext")
         {
+            Database.SetInitializer(new ToDoListDbInitializer());
             this.Configuration.LazyLoadingEnabled = false;
         }
 
         public DbSet<Task> Tasks { get; set; }
     }
 
-    public class ToDoListDbInitializer : DropCreateDatabaseAlways<ToDoListContext>
+    public class ToDoListDbInitializer : CreateDatabaseIfNotExists<ToDoListContext>
     {
         protected override void Seed(ToDoListContext context)
         {
@@ -31,7 +32,7 @@ namespace TaskManager
             {
                 new Task()
                 {
-                    //ID = 101,
+                    Id = 1,
                     Name = "Testowe Zadanie",
                     StartDate = DateTime.Now,
                     Deadline = new DateTime(2022, 04, 09, 11, 15, 0),
@@ -40,7 +41,7 @@ namespace TaskManager
                 },
                 new Task()
                 {
-                    //ID = 102,
+                    Id = 102,
                     Name = "Testowe Zadanie 2",
                     StartDate = DateTime.Now,
                     Deadline = new DateTime(2022, 04, 10, 12, 45, 0),
@@ -49,7 +50,7 @@ namespace TaskManager
                 },
                 new Task()
                 {
-                    //ID = 103,
+                    Id = 103,
                     Name = "Testowe Zadanie 3",
                     StartDate = DateTime.Now,
                     Deadline = new DateTime(2022, 04, 20, 13, 45, 0),
