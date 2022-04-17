@@ -26,7 +26,7 @@
         <Border Margin="0,20"
                 Background="White"
                 CornerRadius="15">
-            <DatePicker Name="DeadlineDatePicker"
+            <DatePicker Name="DeadlineDatePicker"   
                         DisplayDateStart="{x:Static sys:DateTime.Today}"
                         FontSize="20"/>
         </Border>
