@@ -44,7 +44,7 @@ namespace TaskManager.View
         {
             if (((TextBox)sender).Text == "")
             {
-                ((TextBox)sender).Text = ((TextBox)sender).Name;
+                ((TextBox)sender).Text = "Enter your " + ((TextBox)sender).Name;
                 ((TextBox)sender).Foreground = Brushes.Gray;
             }
         }

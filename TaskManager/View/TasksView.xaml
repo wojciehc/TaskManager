@@ -34,7 +34,13 @@
                             <TextBlock Text="{Binding StartDate, StringFormat=d}"
                                    FontSize="14"/>
                             <Button Content="Delete" Command="{Binding DataContext.DeleteCommand, Source={x:Reference TasksList}}" 
-                                    CommandParameter="{Binding .}" />
+                                    CommandParameter="{Binding .}" 
+                                    Margin="0,30,0,0"
+                                    BorderBrush="#cf483e"
+                                    Style="{StaticResource TaskButtonTheme}"
+                                    FontSize="14"
+                                    FontWeight="Bold">
+                            </Button>
                         </StackPanel>
                     </Grid>
                 </Border>

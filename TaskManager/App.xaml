@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Theme/ScrollbarTheme.xaml"/>
                 <ResourceDictionary Source="Theme/TextboxTheme.xaml"/>
                 <ResourceDictionary Source="Theme/TaskBorder.xaml"/>
+                <ResourceDictionary Source="Theme/TaskButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:TasksViewModel}">
