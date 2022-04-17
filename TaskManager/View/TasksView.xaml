@@ -7,15 +7,31 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <ListView Name="TasksList" ItemsSource="{Binding Tasks}" Background="Transparent" ScrollViewer.CanContentScroll="True">
+    <ListView Name="TasksList" ItemsSource="{Binding Tasks}" 
+              Background="Transparent" 
+              ScrollViewer.CanContentScroll="True"
+              BorderBrush="Transparent">
+        <ListView.ItemContainerStyle>
+            <Style TargetType="ListViewItem">
+                <Setter Property="Focusable" Value="false"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ListViewItem}">
+                            <ContentPresenter/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ListView.ItemContainerStyle>
         <ListView.ItemTemplate>
             <DataTemplate>
-                <Border Width="630" Height="100" CornerRadius="25" Style="{DynamicResource TaskBorder}">
+                <Border Width="630" Height="110" CornerRadius="25" Style="{DynamicResource TaskBorder}">
                     <Grid Width="600">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="13*"/>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
                         </Grid.ColumnDefinitions>
 
                         <StackPanel>
@@ -24,7 +40,8 @@
                                    FontSize="25"
                                    FontWeight="Bold"/>
                             <TextBlock Text="{Binding Comment}"
-                                   FontSize="18"/>
+                                   FontSize="18"
+                                       TextWrapping="Wrap"/>
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Right"
                                     Grid.Column="2">
@@ -35,7 +52,7 @@
                                    FontSize="14"/>
                             <Button Content="Delete" Command="{Binding DataContext.DeleteCommand, Source={x:Reference TasksList}}" 
                                     CommandParameter="{Binding .}" 
-                                    Margin="0,30,0,0"
+                                    Margin="0,40,0,0"
                                     BorderBrush="#cf483e"
                                     Style="{StaticResource TaskButtonTheme}"
                                     FontSize="14"
