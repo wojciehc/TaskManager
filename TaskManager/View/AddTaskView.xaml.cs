@@ -33,16 +33,28 @@ namespace TaskManager.View
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             TextBox tb = (TextBox)sender;
-            tb.Text = string.Empty;
-            tb.GotFocus -= TextBox_GotFocus;
+            if (tb.Text == tb.Name)
+            {
+                tb.Text = string.Empty;
+                tb.Foreground = Brushes.Black;
+            }
+        }
+
+        public void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (((TextBox)sender).Text == "")
+            {
+                ((TextBox)sender).Text = ((TextBox)sender).Name;
+                ((TextBox)sender).Foreground = Brushes.Gray;
+            }
         }
 
         private void AddNewTaskButton_Click(object sender, RoutedEventArgs e)
         {
             Task task = new Task()
             {
-                Name = TaskNameTextBox.Text,
-                Comment = CommentTextBox.Text,
+                Name = TaskName.Text,
+                Comment = Comment.Text,
                 StartDate = DateTime.Now,
                 Deadline = DeadlineDatePicker.SelectedDate ?? DateTime.Now,
                 IsCompleted = false,
@@ -50,8 +62,8 @@ namespace TaskManager.View
             context.Tasks.Add(task);
             context.SaveChanges();
 
-            TaskNameTextBox.Clear();
-            CommentTextBox.Clear();
+            TaskName.Clear();
+            Comment.Clear();
         }
     }
 

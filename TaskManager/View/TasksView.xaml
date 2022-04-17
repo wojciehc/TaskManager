@@ -27,16 +27,14 @@
                                    FontSize="18"/>
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Right"
-                                    Grid.Column="1">
+                                    Grid.Column="2">
                             <TextBlock Text="{Binding Deadline, StringFormat=d}"
                                    FontSize="14"
                                    FontWeight="Bold"/>
                             <TextBlock Text="{Binding StartDate, StringFormat=d}"
                                    FontSize="14"/>
-                        </StackPanel>
-                        <StackPanel HorizontalAlignment="Right"
-                                Grid.Column="2">
-                            <Button Content="Delete" Command="{Binding DataContext.DeleteCommand, Source={x:Reference TasksList}}" CommandParameter="{Binding .}" />
+                            <Button Content="Delete" Command="{Binding DataContext.DeleteCommand, Source={x:Reference TasksList}}" 
+                                    CommandParameter="{Binding .}" />
                         </StackPanel>
                     </Grid>
                 </Border>

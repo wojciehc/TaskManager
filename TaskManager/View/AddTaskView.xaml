@@ -10,23 +10,28 @@
              Background="Transparent">
     <StackPanel Margin="40,40,0,0"
                 HorizontalAlignment="Left">
-        <TextBox Name="TaskNameTextBox" 
-                Text="Task name"
+        <TextBox Name="TaskName" 
+                Text="TaskName"
+                 Foreground="Gray"
                  Height="30"
                  Width="400"
                  HorizontalAlignment="Left"
                  Style="{DynamicResource TextBoxTheme}"
-                 GotFocus="TextBox_GotFocus"/>
+                 GotFocus="TextBox_GotFocus"
+                 LostFocus="TextBox_LostFocus"/>
         <TextBox Text="Comment"
-                 Name="CommentTextBox" 
+                 Name="Comment"
+                 Foreground="Gray"
                  Height="100"
                  Width="400"
                  Style="{DynamicResource TextBoxTheme}"
-                 GotFocus="TextBox_GotFocus"/>
+                 GotFocus="TextBox_GotFocus"
+                 LostFocus="TextBox_LostFocus"/>
         <Border Margin="0,20"
                 Background="White"
                 CornerRadius="15">
-            <DatePicker Name="DeadlineDatePicker"   
+            <DatePicker Name="DeadlineDatePicker"  
+                        
                         DisplayDateStart="{x:Static sys:DateTime.Today}"
                         FontSize="20"/>
         </Border>
