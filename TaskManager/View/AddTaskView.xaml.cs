@@ -33,7 +33,7 @@ namespace TaskManager.View
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             TextBox tb = (TextBox)sender;
-            if (tb.Text == tb.Name)
+            if (tb.Text == "Enter your " + tb.Name || tb.Text == tb.Name)
             {
                 tb.Text = string.Empty;
                 tb.Foreground = Brushes.Black;
@@ -62,8 +62,10 @@ namespace TaskManager.View
             context.Tasks.Add(task);
             context.SaveChanges();
 
-            TaskName.Clear();
-            Comment.Clear();
+            TaskName.Text = "Enter your TaskName";
+            TaskName.Foreground = Brushes.Gray;
+            Comment.Text = "Enter your Comment";
+            Comment.Foreground = Brushes.Gray;
         }
     }
 
