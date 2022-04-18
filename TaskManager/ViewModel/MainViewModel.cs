@@ -5,7 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TaskManager.ViewModel 
-{
+{   
+    /// <summary>
+    /// Klasa reprezentujaca widok glowny aplikacji
+    /// </summary>
     class MainViewModel :  ObservableObject
     {
 
@@ -29,6 +32,9 @@ namespace TaskManager.ViewModel
             }
         }
 
+        /// <summary>
+        /// Kontruktor ustawiajcy obecny (domyslny) widok na widok listy zadan
+        /// </summary>
         public MainViewModel() 
         {
             TasksVM = new TasksViewModel();

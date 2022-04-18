@@ -11,7 +11,10 @@ namespace TaskManager
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
+    {   
+        /// <summary>
+        /// Kontruktor inicjalizujacy
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -19,11 +22,19 @@ namespace TaskManager
             UpdateRandomFact();
         }
 
+        /// <summary>
+        /// Fukncja przypisana do przycisku NewFactButton odpowiadajaca za pobranie i wyswietlenie nowego faktu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void NewFactButton_Click(object sender, RoutedEventArgs e)
         {
             await UpdateRandomFact();
         }
-
+            /// <summary>
+            /// Funckja odpowiadajaca za wyslanie zapytania do zewnetrznego api i przekazania faktu do odpowiednego bloku tekstowego
+            /// W przypadku braku odpowiedzi wyswietla informacje o problemie
+            /// </summary>
         private async System.Threading.Tasks.Task UpdateRandomFact()
         {
             NewFactButton.IsEnabled = false;

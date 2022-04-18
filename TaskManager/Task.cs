@@ -2,7 +2,10 @@
 
 
 namespace TaskManager
-{
+{   
+    /// <summary>
+    /// Klasa reprezentująca zadanie
+    /// </summary>
     public class Task
     {
         public int Id { get; set; }

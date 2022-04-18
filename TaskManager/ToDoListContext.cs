@@ -3,15 +3,13 @@ using System.Data.Entity;
 using System.Collections.Generic;
 
 namespace TaskManager
-{
+{   
+    /// <summary>
+    /// Klasa reprezentujaca kontekst bazy danych
+    /// </summary>
     public class ToDoListContext : DbContext
     {
-        // Your context has been configured to use a 'ToDoListContext' connection string from your application's 
-        // configuration file (App.config or Web.config). By default, this connection string targets the 
-        // 'TaskManager.ToDoListContext' database on your LocalDb instance. 
-        // 
-        // If you wish to target a different database and/or database provider, modify the 'ToDoListContext' 
-        // connection string in the application configuration file.
+
         public ToDoListContext()
             : base("name=ToDoListContext")
         {
@@ -20,11 +18,17 @@ namespace TaskManager
         }
 
         public DbSet<Task> Tasks { get; set; }
-       // public DbSet<Fact> Facts { get; set; }
     }
 
+    /// <summary>
+    /// Klasa odpowiadajaca za inicjalizacje bazy danych wywolywana gdy baza danych nie istnieje
+    /// </summary>
     public class ToDoListDbInitializer : CreateDatabaseIfNotExists<ToDoListContext>
-    {
+    {   
+        /// <summary>
+        /// Funckja wpisujaca przykladowe dane do bazy danych
+        /// </summary>
+        /// <param name="context">Kontekst bazy danych</param>
         protected override void Seed(ToDoListContext context)
         {
             var tasks = new List<Task>

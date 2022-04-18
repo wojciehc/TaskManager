@@ -8,7 +8,7 @@ using System.Windows.Media;
 namespace TaskManager.View
 {
     /// <summary>
-    /// Interaction logic for AddTaskView.xaml
+    /// Logika dla pliku AddTaskView.xaml
     /// </summary>
     public partial class AddTaskView : UserControl
     {
@@ -20,7 +20,12 @@ namespace TaskManager.View
 
             context = new ToDoListContext();
         }
-
+            
+        /// <summary>
+        /// Funkcja odpowiadająca za napis w bloku tekstowym, gdy zlapie on focus
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             TextBox tb = (TextBox)sender;
@@ -31,6 +36,11 @@ namespace TaskManager.View
             }
         }
 
+        /// <summary>
+        /// Funkcja odpowiadająca za napis w bloku tekstowym, gdy straci on focus
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void TextBox_LostFocus(object sender, RoutedEventArgs e)
         {
             if (((TextBox)sender).Text == "")
@@ -40,6 +50,11 @@ namespace TaskManager.View
             }
         }
 
+        /// <summary>
+        /// Funkcja przypisana do przycisku AddNewTaskButton odpowiadająca za dodanie do listy nowego zadania
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddNewTaskButton_Click(object sender, RoutedEventArgs e)
         {
             Task task = new Task()

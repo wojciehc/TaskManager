@@ -17,7 +17,7 @@ using TaskManager.ViewModel;
 namespace TaskManager.View
 {
     /// <summary>
-    /// Interaction logic for TasksViev.xaml
+    /// Logika dla pliku TasksViev.xaml
     /// </summary>
     public partial class TasksView : UserControl
     {
