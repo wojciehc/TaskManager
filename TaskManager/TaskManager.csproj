@@ -70,7 +70,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Fact.cs" />
     <Compile Include="Migrations\202204170925559_Initial.cs" />
     <Compile Include="Migrations\202204170925559_Initial.designer.cs">
       <DependentUpon>202204170925559_Initial.cs</DependentUpon>
