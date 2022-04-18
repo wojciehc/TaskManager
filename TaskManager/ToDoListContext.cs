@@ -22,6 +22,7 @@ namespace TaskManager
         }
 
         public DbSet<Task> Tasks { get; set; }
+       // public DbSet<Fact> Facts { get; set; }
     }
 
     public class ToDoListDbInitializer : CreateDatabaseIfNotExists<ToDoListContext>
