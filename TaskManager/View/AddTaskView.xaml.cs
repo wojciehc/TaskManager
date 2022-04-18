@@ -14,6 +14,9 @@ namespace TaskManager.View
     {
         ToDoListContext context;
 
+        /// <summary>
+        /// Konstruktor inicjalizujacy komponenty
+        /// </summary>
         public AddTaskView()
         {
             InitializeComponent();

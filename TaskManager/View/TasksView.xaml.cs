@@ -20,7 +20,10 @@ namespace TaskManager.View
     /// Logika dla pliku TasksViev.xaml
     /// </summary>
     public partial class TasksView : UserControl
-    {
+    {   
+        /// <summary>
+        /// Konstruktor widoki listy zadan
+        /// </summary>
         public TasksView()
         {
             InitializeComponent();

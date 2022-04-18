@@ -10,13 +10,21 @@ namespace TaskManager
     {
         private Action<object> _execute;
         private Func<object, bool> _canExecute;
-
+    
+        /// <summary>
+        /// Obsluga zdarzen
+        /// </summary>
         public event EventHandler CanExecuteChanged 
         {
             add { CommandManager.RequerySuggested += value; }
             remove { CommandManager.RequerySuggested -= value; }
         }
 
+        /// <summary>
+        /// Konstruktor klasy, przypisujacy parametra podane wartosci
+        /// </summary>
+        /// <param name="execute"> egzekucja</param>
+        /// <param name="canExecute">czy mozna egzekwowac</param>
         public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null) 
         {
             _execute = execute;

@@ -11,17 +11,34 @@ namespace TaskManager.ViewModel
     /// </summary>
     class MainViewModel :  ObservableObject
     {
-
+        /// <summary>
+        /// Komenda reprezentujaca widok listy zadan
+        /// </summary>
         public RelayCommand TasksViewCommand { get; set; }
 
+        /// <summary>
+        /// Komenda reprezentujaca widok dodania zadania
+        /// </summary>
         public RelayCommand AddTaskViewCommand { get; set; }
 
+        /// <summary>
+        /// Model widoku listy zadan
+        /// </summary>
         public TasksViewModel TasksVM { get; set; }
 
+        /// <summary>
+        /// Model widoku dodania zadania
+        /// </summary>
         public AddTaskViewModel AddTaskVM { get; set; } 
 
+        /// <summary>
+        /// Zmienna prywatka reprezentujaca obecny widok
+        /// </summary>
         private object _currentView;
 
+        /// <summary>
+        /// Obecny widok
+        /// </summary>
         public object CurrentView 
         {
             get { return _currentView; }
@@ -33,7 +50,7 @@ namespace TaskManager.ViewModel
         }
 
         /// <summary>
-        /// Kontruktor ustawiajcy obecny (domyslny) widok na widok listy zadan
+        /// Kontruktor ustawiajcy obecny (domyslny) widok na widok listy zadan i przypisujacy odpowiednim komenda dane widoki
         /// </summary>
         public MainViewModel() 
         {

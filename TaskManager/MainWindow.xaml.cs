@@ -8,7 +8,7 @@ using System.Windows;
 namespace TaskManager
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika dla pliku MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {   
@@ -33,7 +33,7 @@ namespace TaskManager
         }
             /// <summary>
             /// Funckja odpowiadajaca za wyslanie zapytania do zewnetrznego api i przekazania faktu do odpowiednego bloku tekstowego
-            /// W przypadku braku odpowiedzi wyswietla informacje o problemie
+            /// W przypadku braku odpowiedzi wyswietla informacje o problemie w odpowiednim bloku tekstowym
             /// </summary>
         private async System.Threading.Tasks.Task UpdateRandomFact()
         {

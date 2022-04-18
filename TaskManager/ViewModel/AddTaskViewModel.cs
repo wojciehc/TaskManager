@@ -7,8 +7,10 @@ using System.Windows.Input;
 
 namespace TaskManager.ViewModel
 {
+    /// <summary>
+    /// Klasa reprezentujaca widok dodawania zadania
+    /// </summary>
     internal class AddTaskViewModel
     {
-
     }
 }

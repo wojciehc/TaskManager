@@ -9,7 +9,10 @@ namespace TaskManager
     /// </summary>
     public class ToDoListContext : DbContext
     {
-
+            
+        /// <summary>
+        /// Kontruktor inicjalizujacy
+        /// </summary>
         public ToDoListContext()
             : base("name=ToDoListContext")
         {
@@ -17,6 +20,9 @@ namespace TaskManager
             this.Configuration.LazyLoadingEnabled = false;
         }
 
+        /// <summary>
+        /// Stworzenie tabeli dla zadan
+        /// </summary>
         public DbSet<Task> Tasks { get; set; }
     }
 
