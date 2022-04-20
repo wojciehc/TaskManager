@@ -26,7 +26,12 @@
         </ListView.ItemContainerStyle>
         <ListView.ItemTemplate>
             <DataTemplate>
-                <Border Width="630" Height="110" CornerRadius="25" Style="{DynamicResource TaskBorder}">
+                <Border Width="630" Height="110" CornerRadius="25" Background="White">
+                <Border Width="630" 
+                        Height="110" 
+                        CornerRadius="25" 
+                        Style="{DynamicResource TaskBorder}"
+                        Background="LightGreen">
                     <Grid Width="600">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="13*"/>
@@ -60,6 +65,7 @@
                             </Button>
                         </StackPanel>
                     </Grid>
+                </Border>
                 </Border>
             </DataTemplate>
         </ListView.ItemTemplate>
