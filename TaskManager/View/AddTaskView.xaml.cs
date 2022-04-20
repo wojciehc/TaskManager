@@ -60,14 +60,21 @@ namespace TaskManager.View
         /// <param name="e"></param>
         private void AddNewTaskButton_Click(object sender, RoutedEventArgs e)
         {
-            Task task = new Task()
+            if (TaskName.Text != "Enter your TaskName" && TaskName.Text != "TaskName" && !string.IsNullOrWhiteSpace(TaskName.Text))
             {
-                Name = TaskName.Text,
-                Comment = Comment.Text,
-                StartDate = DateTime.Now,
-                Deadline = DeadlineDatePicker.SelectedDate ?? DateTime.Now,
-                IsCompleted = false,
-            };  
+                if (Comment.Text == "Enter your Comment" || Comment.Text == "Comment")
+                {
+                    Comment.Text = string.Empty;
+                }
+                    Task task = new Task()
+                {
+                    Name = TaskName.Text,
+                    Comment = Comment.Text,
+                    StartDate = DateTime.Now,
+                    Deadline = DeadlineDatePicker.SelectedDate ?? DateTime.Now,
+                    IsCompleted = false,
+                };
+           
             context.Tasks.Add(task);
             context.SaveChanges();
 
@@ -75,6 +82,10 @@ namespace TaskManager.View
             TaskName.Foreground = Brushes.Gray;
             Comment.Text = "Enter your Comment";
             Comment.Foreground = Brushes.Gray;
+            Error.Text = "";
+            }
+            else
+            Error.Text ="TaskName can't be empty!";
         }
     }
 

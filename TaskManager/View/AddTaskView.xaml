@@ -10,6 +10,11 @@
              Background="Transparent">
     <StackPanel Margin="40,40,0,0"
                 HorizontalAlignment="Left">
+        <TextBlock Name="Error"
+                   Text=""
+                   Foreground="Red"
+                   FontWeight="Bold"
+                   FontSize="20"/>
         <TextBox Name="TaskName" 
                 Text="TaskName"
                  Foreground="Gray"
