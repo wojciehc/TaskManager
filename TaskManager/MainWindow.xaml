@@ -20,8 +20,8 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="55*"/>
-            <RowDefinition Height="380*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
 
         <TextBlock Text ="Task Manager"
@@ -80,7 +80,7 @@
                    TextWrapping="Wrap"
                    TextAlignment="Center"
                    Foreground="White"
-                   Height="55"
+                   Height="80"
                    Width="630"
                    Margin="0,0,95,0"
                    Background="Transparent"/>

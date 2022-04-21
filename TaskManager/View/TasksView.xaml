@@ -26,7 +26,8 @@
         </ListView.ItemContainerStyle>
         <ListView.ItemTemplate>
             <DataTemplate>
-                <Border Width="630" Height="110" CornerRadius="25" Background="White">
+                <Border Width="630" Height="110" CornerRadius="25" Background="White"
+                        Margin="0,2,0,0">
                 <Border Width="630" 
                         Height="110" 
                         CornerRadius="25" 
