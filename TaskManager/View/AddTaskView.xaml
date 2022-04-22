@@ -10,13 +10,12 @@
              Background="Transparent">
     <StackPanel Margin="30,20,0,0"
                 HorizontalAlignment="Left">
-        <TextBlock Name="Error"
+        <TextBlock Name="Information"
                    Text=""
-                   Foreground="Red"
                    FontWeight="Bold"
                    FontSize="20"/>
         <TextBox Name="TaskName" 
-                Text="TaskName"
+                Text="Enter your TaskName"
                  Foreground="Gray"
                  Height="30"
                  Width="400"
@@ -24,7 +23,7 @@
                  Style="{DynamicResource TextBoxTheme}"
                  GotFocus="TextBox_GotFocus"
                  LostFocus="TextBox_LostFocus"/>
-        <TextBox Text="Comment"
+        <TextBox Text="Enter your Comment"
                  Name="Comment"
                  Foreground="Gray"
                  Height="100"
@@ -35,10 +34,10 @@
         <Border Margin="0,20"
                 Background="White"
                 CornerRadius="15">
-            <DatePicker Name="DeadlineDatePicker"  
-                        
+            <DatePicker Name="DeadlineDatePicker" 
                         DisplayDateStart="{x:Static sys:DateTime.Today}"
-                        FontSize="20"/>
+                        FontSize="20"
+                        Focusable="False"/>
         </Border>
 
         <Button Content="Add new task"

@@ -55,14 +55,15 @@ namespace TaskManager.View
 
         /// <summary>
         /// Funkcja przypisana do przycisku AddNewTaskButton odpowiadająca za dodanie do listy nowego zadania
+        /// Wyswietla komunikat po sukcesie lub po porazce
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void AddNewTaskButton_Click(object sender, RoutedEventArgs e)
         {
-            if (TaskName.Text != "Enter your TaskName" && TaskName.Text != "TaskName" && !string.IsNullOrWhiteSpace(TaskName.Text))
+            if (TaskName.Text != "Enter your TaskName" && !string.IsNullOrWhiteSpace(TaskName.Text))
             {
-                if (Comment.Text == "Enter your Comment" || Comment.Text == "Comment")
+                if (Comment.Text == "Enter your Comment")
                 {
                     Comment.Text = string.Empty;
                 }
@@ -75,17 +76,23 @@ namespace TaskManager.View
                     IsCompleted = false,
                 };
            
-            context.Tasks.Add(task);
-            context.SaveChanges();
+                context.Tasks.Add(task);
+                context.SaveChanges();
 
-            TaskName.Text = "Enter your TaskName";
-            TaskName.Foreground = Brushes.Gray;
-            Comment.Text = "Enter your Comment";
-            Comment.Foreground = Brushes.Gray;
-            Error.Text = "";
+                TaskName.Text = "Enter your TaskName";
+                TaskName.Foreground = Brushes.Gray;
+                Comment.Text = "Enter your Comment";
+                Comment.Foreground = Brushes.Gray;
+
+                Information.Foreground = Brushes.LightGreen;
+                Information.Text = "Added new task";
             }
-            else
-            Error.Text ="TaskName can't be empty!";
+            else 
+            {
+                Information.Foreground = Brushes.Red;
+                Information.Text = "TaskName can't be empty!";
+            }
+            
         }
     }
 
