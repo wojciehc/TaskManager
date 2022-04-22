@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskManager</name>
+    </assembly>
+    <members>
+        <member name="T:TaskManager.ObservableObject">
+            <summary>
+            Klasa reprezentujaca obserwowalny obiekt
+            </summary>
+        </member>
+        <member name="M:TaskManager.ObservableObject.OnPropertyChanged(System.String)">
+            <summary>
+            Funckja odpowiadajca za zmiane wlasnosci
+            </summary>
+            <param name="name">Nazwa wywolujacego metode - null</param>
+        </member>
+        <member name="T:TaskManager.RelayCommand">
+            <summary>
+            Klasa reprezentujaca przekazywana komende
+            </summary>
+        </member>
+        <member name="E:TaskManager.RelayCommand.CanExecuteChanged">
+            <summary>
+            Obsluga zdarzen
+            </summary>
+        </member>
+        <member name="M:TaskManager.RelayCommand.#ctor(System.Action{System.Object},System.Func{System.Object,System.Boolean})">
+            <summary>
+            Konstruktor klasy, przypisujacy parametra podane wartosci
+            </summary>
+            <param name="execute"> egzekucja</param>
+            <param name="canExecute">czy mozna egzekwowac</param>
+        </member>
+        <member name="M:TaskManager.RelayCommand.CanExecute(System.Object)">
+            <summary>
+            Funcja sprawdzajaca czy mozna wykonac komende
+            </summary>
+            <param name="parameter"> Komenda</param>
+            <returns></returns>
+        </member>
+        <member name="M:TaskManager.RelayCommand.Execute(System.Object)">
+            <summary>
+            Funkcja odpowiadajaca za wykonanie komendy
+            </summary>
+            <param name="parameter">Komenda</param>
+        </member>
+        <member name="T:TaskManager.Task">
+            <summary>
+            Klasa reprezentująca zadanie
+            </summary>
+        </member>
+        <member name="P:TaskManager.Task.Id">
+            <summary>
+            id zadania
+            </summary>
+        </member>
+        <member name="P:TaskManager.Task.Name">
+            <summary>
+            Nazwa zadania
+            </summary>
+        </member>
+        <member name="P:TaskManager.Task.StartDate">
+            <summary>
+            Data poczatkowa
+            </summary>
+        </member>
+        <member name="P:TaskManager.Task.Deadline">
+            <summary>
+            Data koncowa
+            </summary>
+        </member>
+        <member name="P:TaskManager.Task.Comment">
+            <summary>
+            komentarz - opis zadania
+            </summary>
+        </member>
+        <member name="P:TaskManager.Task.IsCompleted">
+            <summary>
+            czy wykonane
+            </summary>
+        </member>
+        <member name="T:TaskManager.ToDoListContext">
+            <summary>
+            Klasa reprezentujaca kontekst bazy danych
+            </summary>
+        </member>
+        <member name="M:TaskManager.ToDoListContext.#ctor">
+            <summary>
+            Kontruktor inicjalizujacy
+            </summary>
+        </member>
+        <member name="P:TaskManager.ToDoListContext.Tasks">
+            <summary>
+            Stworzenie tabeli dla zadan
+            </summary>
+        </member>
+        <member name="T:TaskManager.ToDoListDbInitializer">
+            <summary>
+            Klasa odpowiadajaca za inicjalizacje bazy danych wywolywana gdy baza danych nie istnieje
+            </summary>
+        </member>
+        <member name="M:TaskManager.ToDoListDbInitializer.Seed(TaskManager.ToDoListContext)">
+            <summary>
+            Funckja wpisujaca przykladowe dane do bazy danych
+            </summary>
+            <param name="context">Kontekst bazy danych</param>
+        </member>
+        <member name="T:TaskManager.ViewModel.AddTaskViewModel">
+            <summary>
+            Klasa reprezentujaca widok dodawania zadania
+            </summary>
+        </member>
+        <member name="T:TaskManager.ViewModel.MainViewModel">
+            <summary>
+            Klasa reprezentujaca widok glowny aplikacji
+            </summary>
+        </member>
+        <member name="P:TaskManager.ViewModel.MainViewModel.TasksViewCommand">
+            <summary>
+            Komenda reprezentujaca widok listy zadan
+            </summary>
+        </member>
+        <member name="P:TaskManager.ViewModel.MainViewModel.AddTaskViewCommand">
+            <summary>
+            Komenda reprezentujaca widok dodania zadania
+            </summary>
+        </member>
+        <member name="P:TaskManager.ViewModel.MainViewModel.TasksVM">
+            <summary>
+            Model widoku listy zadan
+            </summary>
+        </member>
+        <member name="P:TaskManager.ViewModel.MainViewModel.AddTaskVM">
+            <summary>
+            Model widoku dodania zadania
+            </summary>
+        </member>
+        <member name="F:TaskManager.ViewModel.MainViewModel._currentView">
+            <summary>
+            Zmienna prywatka reprezentujaca obecny widok
+            </summary>
+        </member>
+        <member name="P:TaskManager.ViewModel.MainViewModel.CurrentView">
+            <summary>
+            Obecny widok
+            </summary>
+        </member>
+        <member name="M:TaskManager.ViewModel.MainViewModel.#ctor">
+            <summary>
+            Kontruktor ustawiajcy obecny (domyslny) widok na widok listy zadan i przypisujacy odpowiednim komenda dane widoki
+            </summary>
+        </member>
+        <member name="T:TaskManager.ViewModel.TasksViewModel">
+            <summary>
+            Klasa reprezentujaca widok listy zadan
+            </summary>
+        </member>
+        <member name="M:TaskManager.ViewModel.TasksViewModel.#ctor">
+            <summary>
+            Kontruktor inicjalizujacy kolekcje zadan wraz z posortowaniem wzgledem deadlinu
+            </summary>
+        </member>
+        <member name="M:TaskManager.ViewModel.TasksViewModel.DeleteTask(System.Object)">
+            <summary>
+            Funckja do usuwania zadania z listy zadan
+            </summary>
+            <param name="param"> Dany element z listy</param>
+        </member>
+        <member name="T:TaskManager.View.AddTaskView">
+            <summary>
+            Logika dla pliku AddTaskView.xaml
+            </summary>
+            <summary>
+            AddTaskView
+            </summary>
+        </member>
+        <member name="M:TaskManager.View.AddTaskView.#ctor">
+            <summary>
+            Konstruktor inicjalizujacy komponenty
+            </summary>
+        </member>
+        <member name="M:TaskManager.View.AddTaskView.TextBox_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Funkcja odpowiadająca za napis w bloku tekstowym, gdy zlapie on focus
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:TaskManager.View.AddTaskView.TextBox_LostFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Funkcja odpowiadająca za napis w bloku tekstowym, gdy straci on focus
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:TaskManager.View.AddTaskView.AddNewTaskButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Funkcja przypisana do przycisku AddNewTaskButton odpowiadająca za dodanie do listy nowego zadania
+            Wyswietla komunikat po sukcesie lub po porazce
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:TaskManager.View.AddTaskView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:TaskManager.View.TasksView">
+            <summary>
+            Logika dla pliku TasksViev.xaml
+            </summary>
+            <summary>
+            TasksView
+            </summary>
+        </member>
+        <member name="M:TaskManager.View.TasksView.#ctor">
+            <summary>
+            Konstruktor widoki listy zadan
+            </summary>
+        </member>
+        <member name="M:TaskManager.View.TasksView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:TaskManager.App">
+            <summary>
+            Logika dla pliku App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:TaskManager.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:TaskManager.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:TaskManager.MainWindow">
+            <summary>
+            Logika dla pliku MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:TaskManager.MainWindow.#ctor">
+            <summary>
+            Kontruktor inicjalizujacy
+            </summary>
+        </member>
+        <member name="M:TaskManager.MainWindow.NewFactButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Fukncja przypisana do przycisku NewFactButton odpowiadajaca za pobranie i wyswietlenie nowego faktu
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:TaskManager.MainWindow.UpdateRandomFact">
+            <summary>
+            Funckja odpowiadajaca za wyslanie zapytania do zewnetrznego api i przekazania faktu do odpowiednego bloku tekstowego
+            W przypadku braku odpowiedzi wyswietla informacje o problemie w odpowiednim bloku tekstowym
+            </summary>
+        </member>
+        <member name="M:TaskManager.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:TaskManager.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>
